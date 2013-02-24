@@ -5,7 +5,7 @@ This is a Vagrant Ubuntu instance to help you get started with the
 work in conjunction with the [fabfile](https://github.com/ryankanno/django-skeleton/blob/master/fabfile.py)
 from [django-skeleton](http://github.com/ryankanno/django-skeleton/).  By
 cloning this repository, you'll quickly have a playground environment to play
-around with the Django framework.
+around with the Django framework.  Based off http://github.com/ryankanno/django-vagrant
 
 
 ##Features 
@@ -24,7 +24,7 @@ Ubuntu 12.04 LTS
 
 ##Install
 
-* `git clone http://github.com/ryankanno/django-vagrant`
+* `git clone http://github.com/crolfe/django-vagrant`
 * `git submodule update --init`
 * `vagrant up`
 * `vagrant provision` (to reset password using libshadow)
