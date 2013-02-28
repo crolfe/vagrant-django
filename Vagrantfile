@@ -5,12 +5,11 @@ Vagrant::Config.run do |config|
 
  config.vm.customize [
     "modifyvm", :id,
-    "--name", "CommonDev",
+    "--name", "ccdev",
     "--memory", "512"
   ]
-
-  # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "precise64"
+  config.vm.host_name = "ccdev"
+  config.vm.box = "precise32"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
 
@@ -23,12 +22,10 @@ Vagrant::Config.run do |config|
   # Share an additional folder to the guest VM. The first argument is
   # an identifier, the second is the path on the guest to mount the
   # folder, and the third is the path on the host to the actual folder.
-  config.vm.share_folder "v-code", "/commoncode", "./code"
-
-
+  config.vm.share_folder "v-code", "/commoncode", "code"
   config.vm.provision :puppet do |puppet|
      puppet.manifests_path = "manifests"
-     puppet.manifest_file  = "init.pp"
+     puppet.manifest_file  = "base.pp"
      puppet.module_path = "modules"
   end
 end
