@@ -18,16 +18,18 @@ Ubuntu 12.04 LTS
 * avahi-daemon (to avoid nasty port forwarding:  e.g. http://ccdev.local:8000 would connect to your Django dev server running on port 8000)
 
 
-##Installation
+##Installation & Usage
 
 * Install [Vagrant](http://www.vagrantup.com)
 * Clone this repo
-* Change to the vagrant-django directory and type: vagrant up
+* Change to the vagrant-django directory 
+* type: vagrant up
 * Once the machine has finished downloading and provisioning, type: vagrant ssh
 
 That's it! 
 
-##Misc
+##Misc config options
 
-* Change the hostname by editing the config.vm.host_name line
+* It makes sense to share a "code" directory between your host and VM.  Create a directory called "code" within /vagrant-django and uncomment this line: config.vm.share_folder "v-code"    , "/commoncode", "code"
+* You can change the hostname by editing the config.vm.host_name line
 * See [here](http://docs.vagrantup.com/v1/docs/vagrantfile.html) for a comprehensive list of config parameters
