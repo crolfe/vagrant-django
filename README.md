@@ -15,14 +15,19 @@ Ubuntu 12.04 LTS
 * vim 
 * virtualenv & virtualenvwrapper
 * sqlite3
-* avahi-daemon (to avoid nasty port forwarding: the VM simply can be accessed by <hostname>.local<port> without any extra config)
+* avahi-daemon (to avoid nasty port forwarding:  e.g. http://ccdev.local:8000 would connect to your Django dev server running on port 8000)
 
 
 ##Installation
 
 * Install [Vagrant](http://www.vagrantup.com)
-* clone this repo
-* change to the vagrant-django directory and type: vagrant up
-* once the machine has finished downloading and provisioning, type: vagrant ssh
+* Clone this repo
+* Change to the vagrant-django directory and type: vagrant up
+* Once the machine has finished downloading and provisioning, type: vagrant ssh
 
 That's it! 
+
+##Misc
+
+* Change the hostname by editing the config.vm.host_name line
+* See [here](http://docs.vagrantup.com/v1/docs/vagrantfile.html) for a comprehensive list of config parameters
