@@ -13,3 +13,5 @@ include avahi-daemon
 include python
 include postgres
 include sqlite
+include memcached
+include nodejs
